@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions - BANUMATHI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question-container {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 16px;
+        }
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-left: 3px solid #ccc;
+            margin-bottom: 10px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interview Questions</h1>
+    <h2>For Freshers to 3 Years of Experience</h2>
+
+    <!-- Question 1 -->
+    <div class="question-container">
+        <h3>Question 1: What is Angular Routing?</h3>
+        <p><strong>Answer:</strong> Angular routing allows navigation between different views or components without refreshing the page.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            const routes: Routes = [
+                { path: 'home', component: HomeComponent },
+                { path: 'about', component: AboutComponent }
+            ];
+        </code>
+        <p><strong>Example:</strong> Set up routing between the home and about pages in an Angular application.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, it allows navigating between student, faculty, and administrative modules seamlessly.</p>
+        <p><strong>Real-world example:</strong> Navigating between different sections like dashboard, profile, and settings on a social media site.</p>
+        <p><strong>What kind of task will be asked:</strong> Configure routes in Angular, implement lazy loading, or set up child routes.</p>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-container">
+        <h3>Question 2: What is Dependency Injection in Angular?</h3>
+        <p><strong>Answer:</strong> Dependency Injection (DI) is a design pattern where services are injected into components to separate concerns and promote reusability.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            @Injectable({ providedIn: 'root' })
+            export class MyService {
+                constructor() {}
+            }
+
+            export class MyComponent {
+                constructor(private myService: MyService) {}
+            }
+        </code>
+        <p><strong>Example:</strong> Inject a logging service into a component to log user actions.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, services like student data management are injected into different components for reusability.</p>
+        <p><strong>Real-world example:</strong> Injecting an authentication service to check user credentials during login.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement DI in services, components, or modules.</p>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-container">
+        <h3>Question 3: What is a RESTful Web API in .NET Core?</h3>
+        <p><strong>Answer:</strong> A RESTful Web API in .NET Core is a set of HTTP services that provide access to resources for clients.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            [HttpGet]
+            public IActionResult GetAllStudents() {
+                return Ok(_studentService.GetAll());
+            }
+        </code>
+        <p><strong>Example:</strong> A GET API that retrieves all student records from the database.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, the Web API is used to provide services like fetching student data, creating users, and handling requests from the front end.</p>
+        <p><strong>Real-world example:</strong> A REST API like GitHub’s API that allows clients to fetch user repositories.</p>
+        <p><strong>What kind of task will be asked:</strong> Create API endpoints to retrieve, add, update, or delete data in the database.</p>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question-container">
+        <h3>Question 4: What are Angular Directives?</h3>
+        <p><strong>Answer:</strong> Directives in Angular are used to extend HTML by adding behavior or modifying the DOM.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            &lt;div *ngIf="isVisible"&gt;Visible Content&lt;/div&gt;
+        </code>
+        <p><strong>Example:</strong> The `*ngIf` directive displays an element if the condition is true.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, we used `ngIf` to display dynamic content based on user roles.</p>
+        <p><strong>Real-world example:</strong> Showing or hiding content on a dashboard based on user permissions.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement custom directives or use built-in directives like `ngIf` and `ngFor`.</p>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question-container">
+        <h3>Question 5: How does Angular Handle Forms?</h3>
+        <p><strong>Answer:</strong> Angular provides two ways to handle forms: template-driven and reactive forms.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            Reactive Form:
+            this.form = this.fb.group({
+                name: ['', Validators.required]
+            });
+        </code>
+        <p><strong>Example:</strong> A reactive form with validation for a name input field.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, reactive forms are used to validate user input before submitting it to the server.</p>
+        <p><strong>Real-world example:</strong> Registration forms with validation in an e-commerce site, where fields are validated before submitting data.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement forms, add validations, or handle form submission in Angular applications.</p>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question-container">
+        <h3>Question 6: What is SQL Joins?</h3>
+        <p><strong>Answer:</strong> SQL Joins are used to combine records from two or more tables based on a related column between them.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            SELECT orders.OrderID, customers.CustomerName
+            FROM orders
+            INNER JOIN customers ON orders.CustomerID = customers.CustomerID;
+        </code>
+        <p><strong>Example:</strong> The query joins orders and customers tables based on the CustomerID column.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, joins are used to fetch related data like student and class details.</p>
+        <p><strong>Real-world example:</strong> Joining an orders table with a customer table to show details of customer orders.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to write SQL queries to fetch data using various types of joins (inner, left, right, full).</p>
+    </div>
+
+<div class="question-container">
+        <h3>Question 7: What is Angular Routing?</h3>
+        <p><strong>Answer:</strong> Angular routing is a feature that allows you to navigate between different views or components in an Angular application without refreshing the entire page.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            const routes: Routes = [
+                { path: 'home', component: HomeComponent },
+                { path: 'about', component: AboutComponent }
+            ];
+        </code>
+        <p><strong>Example:</strong> This allows a user to click on a link and move between different sections of an application like Home, About, etc.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, routing helps users navigate through different modules like student information, faculty, and administrative sections.</p>
+        <p><strong>Real world example:</strong> Navigating between profile, settings, and dashboard in a web application like Google or Facebook without reloading the whole page.</p>
+        <p><strong>What kind of task will be asked from this question:</strong> You might be asked to configure routes in an Angular application, set up child routes, or enable lazy loading for optimization.</p>
+    </div>
+
+    <div class="question-container">
+        <h3>Question 8: What is Dependency Injection in Angular?</h3>
+        <p><strong>Answer:</strong> Dependency Injection (DI) is a design pattern in Angular where the framework provides instances of a class to another class without hardcoding the instantiation.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            @Injectable({ providedIn: 'root' })
+            export class MyService {
+                constructor() {}
+            }
+
+            export class MyComponent {
+                constructor(private myService: MyService) {}
+            }
+        </code>
+        <p><strong>Example:</strong> Injecting a service into a component so that the component can use the functionality provided by the service.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, services like student management, reporting, and authentication are injected into various components for code reusability and modularization.</p>
+        <p><strong>Real world example:</strong> When logging into a system, the authentication service is injected into the login component to handle user validation.</p>
+        <p><strong>What kind of task will be asked from this question:</strong> You may be asked to implement a service and inject it into multiple components or understand different DI scopes (singleton or not).</p>
+    </div>
+
+    <div class="question-container">
+        <h3>Question 9: What are Angular Directives?</h3>
+        <p><strong>Answer:</strong> Directives are classes in Angular that add behavior to elements in your Angular applications.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            &lt;div *ngIf="isVisible"&gt;Content here&lt;/div&gt;
+        </code>
+        <p><strong>Example:</strong> The `*ngIf` directive conditionally renders elements based on the expression provided.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, `ngIf` is used to show or hide elements like user actions based on their permissions.</p>
+        <p><strong>Real world example:</strong> Displaying or hiding buttons based on user role (admin, student, faculty) in a portal.</p>
+        <p><strong>What kind of task will be asked from this question:</strong> Implement custom directives to manipulate DOM elements, handle events, or conditionally display content.</p>
+    </div>
+
+
+<div class="question-container">
+        <h3>Question 10: What is Angular Routing?</h3>
+        <p><strong>Answer:</strong> Angular routing allows navigation between different views or components without refreshing the page.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            const routes: Routes = [
+                { path: 'home', component: HomeComponent },
+                { path: 'about', component: AboutComponent }
+            ];
+        </code>
+        <p><strong>Example:</strong> Set up routing between the home and about pages in an Angular application.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, it allows navigating between student, faculty, and administrative modules seamlessly.</p>
+        <p><strong>Real-world example:</strong> Navigating between different sections like dashboard, profile, and settings on a social media site.</p>
+        <p><strong>What kind of task will be asked:</strong> Configure routes in Angular, implement lazy loading, or set up child routes.</p>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question-container">
+        <h3>Question 11: What is Dependency Injection in Angular?</h3>
+        <p><strong>Answer:</strong> Dependency Injection (DI) is a design pattern where services are injected into components to separate concerns and promote reusability.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            @Injectable({ providedIn: 'root' })
+            export class MyService {
+                constructor() {}
+            }
+
+            export class MyComponent {
+                constructor(private myService: MyService) {}
+            }
+        </code>
+        <p><strong>Example:</strong> Inject a logging service into a component to log user actions.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, services like student data management are injected into different components for reusability.</p>
+        <p><strong>Real-world example:</strong> Injecting an authentication service to check user credentials during login.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement DI in services, components, or modules.</p>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question-container">
+        <h3>Question 12: What is a RESTful Web API in .NET Core?</h3>
+        <p><strong>Answer:</strong> A RESTful Web API in .NET Core is a set of HTTP services that provide access to resources for clients.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            [HttpGet]
+            public IActionResult GetAllStudents() {
+                return Ok(_studentService.GetAll());
+            }
+        </code>
+        <p><strong>Example:</strong> A GET API that retrieves all student records from the database.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, the Web API is used to provide services like fetching student data, creating users, and handling requests from the front end.</p>
+        <p><strong>Real-world example:</strong> A REST API like GitHub’s API that allows clients to fetch user repositories.</p>
+        <p><strong>What kind of task will be asked:</strong> Create API endpoints to retrieve, add, update, or delete data in the database.</p>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question-container">
+        <h3>Question 13: What are Angular Directives?</h3>
+        <p><strong>Answer:</strong> Directives in Angular are used to extend HTML by adding behavior or modifying the DOM.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            &lt;div *ngIf="isVisible"&gt;Visible Content&lt;/div&gt;
+        </code>
+        <p><strong>Example:</strong> The `*ngIf` directive displays an element if the condition is true.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, we used `ngIf` to display dynamic content based on user roles.</p>
+        <p><strong>Real-world example:</strong> Showing or hiding content on a dashboard based on user permissions.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement custom directives or use built-in directives like `ngIf` and `ngFor`.</p>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question-container">
+        <h3>Question 14: How does Angular Handle Forms?</h3>
+        <p><strong>Answer:</strong> Angular provides two ways to handle forms: template-driven and reactive forms.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            Reactive Form:
+            this.form = this.fb.group({
+                name: ['', Validators.required]
+            });
+        </code>
+        <p><strong>Example:</strong> A reactive form with validation for a name input field.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, reactive forms are used to validate user input before submitting it to the server.</p>
+        <p><strong>Real-world example:</strong> Registration forms with validation in an e-commerce site, where fields are validated before submitting data.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement forms, add validations, or handle form submission in Angular applications.</p>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question-container">
+        <h3>Question 15: What is SQL Joins?</h3>
+        <p><strong>Answer:</strong> SQL Joins are used to combine records from two or more tables based on a related column between them.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            SELECT orders.OrderID, customers.CustomerName
+            FROM orders
+            INNER JOIN customers ON orders.CustomerID = customers.CustomerID;
+        </code>
+        <p><strong>Example:</strong> The query joins orders and customers tables based on the CustomerID column.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, joins are used to fetch related data like student and class details.</p>
+        <p><strong>Real-world example:</strong> Joining an orders table with a customer table to show details of customer orders.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to write SQL queries to fetch data using various types of joins (inner, left, right, full).</p>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question-container">
+        <h3>Question 16: What are Promises in JavaScript?</h3>
+        <p><strong>Answer:</strong> A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            let promise = new Promise((resolve, reject) => {
+                // Asynchronous operation
+            });
+
+            promise.then(result => {
+                // Handle success
+            }).catch(error => {
+                // Handle failure
+            });
+        </code>
+        <p><strong>Example:</strong> Making an HTTP request to fetch data from an API and returning a promise for success or failure.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, promises are used to handle HTTP requests and asynchronous data fetching from the backend API.</p>
+        <p><strong>Real-world example:</strong> Fetching user data from a server in a social media platform and displaying it on the user profile page once the data is retrieved.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to handle asynchronous tasks, such as making API calls, using promises or async/await in JavaScript.</p>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question-container">
+        <h3>Question 17: What is Angular Interpolation?</h3>
+        <p><strong>Answer:</strong> Interpolation in Angular is a way to bind data from the component to the view using double curly braces `{{}}`.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            &lt;h1&gt;Welcome {{ name }}!&lt;/h1&gt;
+        </code>
+        <p><strong>Example:</strong> Displaying a user’s name dynamically on the page using `{{ name }}` where `name` is a variable in the component.</p>
+        <p><strong>How it will be used in my project:</strong> Interpolation is used in the Education ERP solution to dynamically display student information and feedback in various pages.</p>
+        <p><strong>Real-world example:</strong> Displaying a user’s name on their dashboard after logging in to a banking portal.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to dynamically bind component data to the view using interpolation and manage how the UI reacts to changes in the data.</p>
+    </div>
+
+   <!-- Question 7 -->
+    <div class="question-container">
+        <h3>Question 7: What are Promises in JavaScript?</h3>
+        <p><strong>Answer:</strong> A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            let promise = new Promise((resolve, reject) => {
+                // Asynchronous operation
+            });
+
+            promise.then(result => {
+                // Handle success
+            }).catch(error => {
+                // Handle failure
+            });
+        </code>
+        <p><strong>Example:</strong> Making an HTTP request to fetch data from an API and returning a promise for success or failure.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, promises are used to handle HTTP requests and asynchronous data fetching from the backend API.</p>
+        <p><strong>Real-world example:</strong> Fetching user data from a server in a social media platform and displaying it on the user profile page once the data is retrieved.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to handle asynchronous tasks, such as making API calls, using promises or async/await in JavaScript.</p>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question-container">
+        <h3>Question 8: What is Angular Interpolation?</h3>
+        <p><strong>Answer:</strong> Interpolation in Angular is a way to bind data from the component to the view using double curly braces `{{}}`.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            &lt;h1&gt;Welcome {{ name }}!&lt;/h1&gt;
+        </code>
+        <p><strong>Example:</strong> Displaying a user’s name dynamically on the page using `{{ name }}` where `name` is a variable in the component.</p>
+        <p><strong>How it will be used in my project:</strong> Interpolation is used in the Education ERP solution to dynamically display student information and feedback in various pages.</p>
+        <p><strong>Real-world example:</strong> Displaying a user’s name on their dashboard after logging in to a banking portal.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to dynamically bind component data to the view using interpolation and manage how the UI reacts to changes in the data.</p>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question-container">
+        <h3>Question 9: What is Two-way Data Binding in Angular?</h3>
+        <p><strong>Answer:</strong> Two-way data binding in Angular allows synchronization between the data model and the view, so that changes in one are reflected in the other.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            &lt;input [(ngModel)]="name" /&gt;
+            &lt;p&gt;Hello {{name}}!&lt;/p&gt;
+        </code>
+        <p><strong>Example:</strong> The user can input their name in a form field, and the name will be updated in the view dynamically.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, two-way data binding is used for forms where user input dynamically updates displayed data.</p>
+        <p><strong>Real-world example:</strong> In a chat application, as the user types a message, the text is dynamically displayed in the preview area.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement two-way data binding for form inputs and synchronize data between the UI and model.</p>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question-container">
+        <h3>Question 10: Explain Angular Services and how they are used.</h3>
+        <p><strong>Answer:</strong> Angular services are classes that handle specific tasks such as fetching data from an API. Services promote code reusability and separation of concerns.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            @Injectable({
+                providedIn: 'root'
+            })
+            export class DataService {
+                getData() {
+                    return this.http.get('api/data');
+                }
+            }
+        </code>
+        <p><strong>Example:</strong> A service that fetches user data from an API.</p>
+        <p><strong>How it will be used in my project:</strong> Services in the Education ERP solution are used to fetch and manage student data from the backend.</p>
+        <p><strong>Real-world example:</strong> A weather service that retrieves real-time weather data and updates the user’s dashboard.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to create services that handle data fetching or other reusable functionality across multiple components.</p>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question-container">
+        <h3>Question 11: What is Entity Framework in .NET Core?</h3>
+        <p><strong>Answer:</strong> Entity Framework (EF) is an Object-Relational Mapper (ORM) that enables .NET developers to work with databases using .NET objects.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            public class StudentContext : DbContext {
+                public DbSet&lt;Student&gt; Students { get; set; }
+            }
+        </code>
+        <p><strong>Example:</strong> A `DbContext` class that connects to the database and performs CRUD operations on the `Student` entity.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, Entity Framework is used to handle database operations for student and course data.</p>
+        <p><strong>Real-world example:</strong> EF is used to manage customer data in an e-commerce platform, allowing developers to interact with the database using C# objects instead of SQL.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to set up an Entity Framework `DbContext` and perform CRUD operations using LINQ and EF.</p>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question-container">
+        <h3>Question 12: What are Angular Observables and RxJS?</h3>
+        <p><strong>Answer:</strong> Observables are part of RxJS (Reactive Extensions for JavaScript) and are used in Angular to handle asynchronous operations like HTTP requests.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            this.http.get('api/data').subscribe(data => {
+                console.log(data);
+            });
+        </code>
+        <p><strong>Example:</strong> Subscribing to an HTTP request that fetches data from an API.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, observables are used to handle HTTP requests and responses for data retrieval from the server.</p>
+        <p><strong>Real-world example:</strong> Observables can be used to fetch real-time updates in a stock market application where stock prices are updated dynamically.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement HTTP requests using observables and handle asynchronous data in your Angular application.</p>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question-container">
+        <h3>Question 13: What is CORS in Web APIs?</h3>
+        <p><strong>Answer:</strong> CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers to prevent making requests to a different domain without permission.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", builder =>
+                    builder.WithOrigins("http://example.com").AllowAnyMethod().AllowAnyHeader());
+            });
+        </code>
+        <p><strong>Example:</strong> Enabling CORS in an ASP.NET Core Web API to allow requests from `http://example.com`.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, CORS is configured to allow front-end Angular applications hosted on different servers to access the Web API.</p>
+        <p><strong>Real-world example:</strong> A payment gateway hosted on a different domain may require CORS configuration to allow access from your website's API.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to enable CORS in a Web API and configure it to allow cross-domain requests securely.</p>
+    </div>
+
+ <!-- Question 14 -->
+    <div class="question-container">
+        <h3>Question 14: What is the MVC pattern in .NET Core?</h3>
+        <p><strong>Answer:</strong> MVC (Model-View-Controller) is a design pattern used to separate the application logic into three interconnected components: Model, View, and Controller.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            public class HomeController : Controller {
+                public IActionResult Index() {
+                    return View();
+                }
+            }
+        </code>
+        <p><strong>Example:</strong> A simple controller that returns a view.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, MVC architecture is used to separate business logic, UI, and database interactions in the Web API layer.</p>
+        <p><strong>Real-world example:</strong> In e-commerce applications, MVC is used to manage the user interface (view), handle logic (controller), and interact with databases (model) for order management.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to implement an MVC architecture, defining controllers, views, and models for a small application.</p>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question-container">
+        <h3>Question 15: What is Lazy Loading in Angular?</h3>
+        <p><strong>Answer:</strong> Lazy loading is a feature in Angular that allows you to load modules or components only when they are needed, improving application performance.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            const routes: Routes = [
+                { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
+            ];
+        </code>
+        <p><strong>Example:</strong> Lazy loading the admin module so that it is only loaded when the user navigates to the admin route.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, lazy loading is used to improve performance by loading student and admin modules only when accessed.</p>
+        <p><strong>Real-world example:</strong> In large-scale applications like Amazon, certain pages or components are loaded only when the user navigates to them, reducing initial load times.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to configure lazy loading for a specific module or section of an Angular application.</p>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question-container">
+        <h3>Question 16: What are Stored Procedures in SQL Server?</h3>
+        <p><strong>Answer:</strong> A stored procedure is a set of SQL statements that can be stored and executed on the database server to perform specific tasks such as data retrieval, updating, or deletion.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            CREATE PROCEDURE GetStudentDetails
+            AS
+            BEGIN
+                SELECT * FROM Students;
+            END
+        </code>
+        <p><strong>Example:</strong> A stored procedure that retrieves all student records.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, stored procedures are used for complex queries like fetching detailed reports for students, courses, and faculty.</p>
+        <p><strong>Real-world example:</strong> Stored procedures are commonly used in banking systems to manage complex transactions and financial operations.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to write a stored procedure to retrieve, update, or delete data from a database based on specific requirements.</p>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question-container">
+        <h3>Question 17: How do you use Bootstrap for responsive design?</h3>
+        <p><strong>Answer:</strong> Bootstrap is a CSS framework that provides a responsive grid system, components, and utilities for creating responsive and mobile-first web pages.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            &lt;div class="container"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-6"&gt;Column 1&lt;/div&gt;
+                    &lt;div class="col-md-6"&gt;Column 2&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </code>
+        <p><strong>Example:</strong> A responsive two-column layout that adjusts according to screen size.</p>
+        <p><strong>How it will be used in my project:</strong> Bootstrap is used in the ERP solution to ensure that the web application looks good on different devices such as tablets and mobile phones.</p>
+        <p><strong>Real-world example:</strong> Responsive designs like those on e-commerce sites automatically adjust the number of product items shown based on screen size.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to create responsive layouts using Bootstrap’s grid system or build mobile-friendly components.</p>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question-container">
+        <h3>Question 18: What is a Module in Angular?</h3>
+        <p><strong>Answer:</strong> A module in Angular is a container for a group of related components, services, directives, and pipes. Angular modules help in organizing the application into smaller, reusable chunks.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            @NgModule({
+                declarations: [AppComponent],
+                imports: [BrowserModule, FormsModule],
+                bootstrap: [AppComponent]
+            })
+            export class AppModule { }
+        </code>
+        <p><strong>Example:</strong> The `AppModule` is the root module of the Angular application that imports necessary modules like `BrowserModule` and `FormsModule`.</p>
+        <p><strong>How it will be used in my project:</strong> In the Education ERP solution, different features like StudentModule and AdminModule are organized as separate modules to keep the application modular and maintainable.</p>
+        <p><strong>Real-world example:</strong> In a content management system (CMS), modules can be used to separate the administration area from the public content display.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to create or modify Angular modules, ensuring that they are correctly organized and imported.</p>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question-container">
+        <h3>Question 19: What is SQL Indexing and how does it work?</h3>
+        <p><strong>Answer:</strong> SQL Indexing is a technique used to improve the speed of data retrieval operations on a database by creating a data structure that allows for faster lookups.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>
+            CREATE INDEX idx_student_name
+            ON Students (Name);
+        </code>
+        <p><strong>Example:</strong> An index is created on the `Name` column of the `Students` table to speed up search queries based on student names.</p>
+        <p><strong>How it will be used in my project:</strong> Indexing is used in the Education ERP solution to improve query performance when retrieving large datasets such as student records and grades.</p>
+        <p><strong>Real-world example:</strong> In large-scale e-commerce websites, indexes are used to speed up product search queries, improving the overall user experience.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to create or modify indexes in SQL to optimize database performance for read-heavy operations.</p>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question-container">
+        <h3>Question 20: What is Visual Studio Code?</h3>
+        <p><strong>Answer:</strong> Visual Studio Code (VS Code) is a lightweight, open-source code editor developed by Microsoft, used for writing and debugging code in multiple programming languages, including JavaScript, TypeScript, and C#.</p>
+        <p><strong>Example:</strong> You can write, run, and debug Angular, JavaScript, and .NET Core code using VS Code’s integrated terminal and extensions.</p>
+        <p><strong>How it will be used in my project:</strong> In the ERP solution, VS Code is used as the primary development environment for front-end and back-end code development.</p>
+        <p><strong>Real-world example:</strong> Many developers use VS Code in team environments to write, test, and debug code in collaboration on platforms like GitHub.</p>
+        <p><strong>What kind of task will be asked:</strong> You may be asked to configure VS Code extensions for Angular or .NET projects, write code in the editor, and use debugging features.</p>
+    </div>
+
+<!-- Question 22 -->
+<div class="question-container">
+    <h3>Question 22: What is the difference between GET and POST in APIs?</h3>
+    <p><strong>Answer:</strong> GET is used to retrieve data from a server, while POST is used to send data to a server for creation or update.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        // GET request
+        this.http.get('api/data');
+
+        // POST request
+        this.http.post('api/data', { name: 'John' });
+    </code>
+    <p><strong>Example:</strong> Using GET to fetch a list of students and POST to create a new student.</p>
+    <p><strong>How it will be used in my project:</strong> In the Education ERP solution, GET is used to fetch student records while POST is used to add new students to the database.</p>
+    <p><strong>Real-world example:</strong> A search functionality in an application uses GET requests, while submitting a form uses POST requests to send data.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to explain the differences between GET and POST and when to use each in API design.</p>
+</div>
+
+<!-- Question 23 -->
+<div class="question-container">
+    <h3>Question 23: How to manage session in Web API?</h3>
+    <p><strong>Answer:</strong> Sessions in Web API can be managed using tokens, cookies, or by using server-side session management techniques.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        services.AddSession(options =>
+        {
+            options.IdleTimeout = TimeSpan.FromMinutes(30);
+        });
+    </code>
+    <p><strong>Example:</strong> Configuring session management in ASP.NET Core to manage user sessions for authentication.</p>
+    <p><strong>How it will be used in my project:</strong> In the ERP solution, sessions are used to track logged-in users and maintain state during their interaction with the application.</p>
+    <p><strong>Real-world example:</strong> A shopping cart application uses session management to retain user-selected items until checkout.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to implement session management in an API and demonstrate how to maintain user sessions.</p>
+</div>
+
+<!-- Question 24 -->
+<div class="question-container">
+    <h3>Question 24: Explain routing guards in Angular.</h3>
+    <p><strong>Answer:</strong> Routing guards are interfaces that allow you to control access to routes in Angular applications, determining whether a route can be activated or deactivated.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        @Injectable({
+            providedIn: 'root'
+        })
+        export class AuthGuard implements CanActivate {
+            canActivate(
+                route: ActivatedRouteSnapshot,
+                state: RouterStateSnapshot): boolean {
+                return this.authService.isLoggedIn();
+            }
+        }
+    </code>
+    <p><strong>Example:</strong> An AuthGuard that checks if a user is logged in before allowing access to a specific route.</p>
+    <p><strong>How it will be used in my project:</strong> In the ERP solution, guards are used to restrict access to certain modules based on user roles (admin, faculty, student).</p>
+    <p><strong>Real-world example:</strong> Preventing unauthorized users from accessing admin routes in a web application.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to implement routing guards to protect routes based on user authentication and authorization.</p>
+</div>
+
+<!-- Question 25 -->
+<div class="question-container">
+    <h3>Question 25: How to paginate results in SQL Server?</h3>
+    <p><strong>Answer:</strong> Pagination in SQL Server can be implemented using the `OFFSET` and `FETCH NEXT` clauses to limit the number of records returned by a query.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        SELECT * FROM Students
+        ORDER BY StudentID
+        OFFSET 10 ROWS
+        FETCH NEXT 10 ROWS ONLY;
+    </code>
+    <p><strong>Example:</strong> Fetching the second set of 10 student records from the database.</p>
+    <p><strong>How it will be used in my project:</strong> In the ERP solution, pagination is used to display student lists efficiently without overwhelming users with too much data at once.</p>
+    <p><strong>Real-world example:</strong> E-commerce websites paginate product listings to improve load times and user experience.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to write SQL queries that implement pagination to optimize data retrieval.</p>
+</div>
+
+<!-- Question 26 -->
+<div class="question-container">
+    <h3>Question 26: What is the purpose of Angular CLI?</h3>
+    <p><strong>Answer:</strong> Angular CLI (Command Line Interface) is a powerful tool that allows developers to create, manage, and build Angular applications using command line commands.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        ng new my-app
+    </code>
+    <p><strong>Example:</strong> Creating a new Angular application using the Angular CLI.</p>
+    <p><strong>How it will be used in my project:</strong> In the ERP solution, Angular CLI is used to generate components, services, and other files efficiently, saving development time.</p>
+    <p><strong>Real-world example:</strong> Using Angular CLI to set up a project structure quickly and manage builds and testing tasks.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to demonstrate how to use Angular CLI to create components, services, and run the development server.</p>
+</div>
+
+<!-- Question 27 -->
+<div class="question-container">
+    <h3>Question 27: What is TypeScript and how does it differ from JavaScript?</h3>
+    <p><strong>Answer:</strong> TypeScript is a superset of JavaScript that adds static types, allowing developers to catch errors at compile-time instead of run-time.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        let name: string = 'John Doe';
+    </code>
+    <p><strong>Example:</strong> Declaring a variable with a specific type in TypeScript.</p>
+    <p><strong>How it will be used in my project:</strong> In the Education ERP solution, TypeScript is used extensively to ensure type safety and improve code maintainability in Angular components.</p>
+    <p><strong>Real-world example:</strong> Using TypeScript in large-scale applications like Microsoft Office 365 to catch errors early and maintain cleaner code.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to explain the benefits of using TypeScript over JavaScript and demonstrate type annotations in code.</p>
+</div>
+
+<!-- Question 28 -->
+<div class="question-container">
+    <h3>Question 28: What is Bootstrap Grid System?</h3>
+    <p><strong>Answer:</strong> The Bootstrap grid system allows developers to create responsive layouts using a series of containers, rows, and columns.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-md-4"&gt;Column 1&lt;/div&gt;
+                &lt;div class="col-md-4"&gt;Column 2&lt;/div&gt;
+                &lt;div class="col-md-4"&gt;Column 3&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+    <p><strong>Example:</strong> A three-column layout that adjusts based on screen size.</p>
+    <p><strong>How it will be used in my project:</strong> In the ERP solution, Bootstrap is used to create responsive forms and dashboards, improving usability across devices.</p>
+    <p><strong>Real-world example:</strong> Many news websites use the Bootstrap grid system to create a responsive layout that adjusts to various screen sizes.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to create responsive layouts using the Bootstrap grid system, implementing columns and rows in HTML.</p>
+</div>
+
+<!-- Question 29 -->
+<div class="question-container">
+    <h3>Question 29: What are async and await in JavaScript?</h3>
+    <p><strong>Answer:</strong> `async` and `await` are used to handle asynchronous operations in JavaScript, allowing you to write cleaner and more readable asynchronous code.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        async function fetchData() {
+            const response = await fetch('api/data');
+            const data = await response.json();
+            return data;
+        }
+    </code>
+    <p><strong>Example:</strong> Using `await` to wait for a fetch request to complete before proceeding.</p>
+    <p><strong>How it will be used in my project:</strong> In the ERP solution, `async/await` is used to handle API calls in a more readable manner, reducing callback hell.</p>
+    <p><strong>Real-world example:</strong> Fetching data from multiple APIs sequentially in a web application using `async/await` to simplify the code.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to refactor existing asynchronous code to use `async/await` for improved readability and error handling.</p>
+</div>
+
+<!-- Question 30 -->
+<div class="question-container">
+    <h3>Question 30: What is a SQL Trigger?</h3>
+    <p><strong>Answer:</strong> A SQL trigger is a special kind of stored procedure that automatically executes in response to certain events on a particular table or view.</p>
+    <p><strong>Syntax:</strong></p>
+    <code>
+        CREATE TRIGGER trgAfterInsert
+        ON Students
+        AFTER INSERT
+        AS
+        BEGIN
+            PRINT 'A new student has been added.';
+        END
+    </code>
+    <p><strong>Example:</strong> A trigger that executes after a new student record is inserted.</p>
+    <p><strong>How it will be used in my project:</strong> In the ERP solution, triggers are used to enforce business rules or log changes to the student data automatically.</p>
+    <p><strong>Real-world example:</strong> Triggers are often used in audit logging scenarios to track changes in data over time.</p>
+    <p><strong>What kind of task will be asked:</strong> You may be asked to write a trigger for a specific event in a database, such as after an insert or update.</p>
+</div>
+
+    <!-- Repeat similar blocks for remaining 44 questions -->
+
+</body>
+</html>
